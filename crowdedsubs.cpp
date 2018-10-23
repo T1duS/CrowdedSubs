@@ -1,5 +1,6 @@
-#include<bits/stdc++.h> // includes all the standard c++ libraries
-#include "srtparser.h" // includes srtparser made by Saurabh Shrivastava
+#include "srtparser.h"
+// includes srtparser made by Saurabh Shrivastava
+// don't need to include any more libraries cuz all the ones I need are already in srtparser.h
 
 using namespace std;
 
