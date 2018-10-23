@@ -5,7 +5,7 @@ using namespace std;
 
 // made another struct to store subtitle info cuz I don't like dealing with pointers and stuff
 struct subinfo{
-  int start,finish,wordcount;
+  int start,finish,wordcount,charcount;
   string thesub;
 };
 
@@ -28,6 +28,7 @@ int main(int argc, char** argv){
         current.finish = element->getEndTime();
         current.thesub = element->getText();
         current.wordcount = element->getWordCount();
+        current.charcount = current.thesub.length();
         v.push_back(current);
   }
   int range = atoi(argv[2])*1000; // range in milli seconds
@@ -40,6 +41,7 @@ int main(int argc, char** argv){
       if(v[index].finish - v[i].start <= range){
         if(thetype == "sub") currentscore ++;
         else if(thetype == "word") currentscore += v[index].wordcount;
+        else if(thetype == "character") currentscore += v[index].charcount;
         index ++;
       }
       else break;
@@ -51,6 +53,7 @@ int main(int argc, char** argv){
     }
     if(thetype == "sub") currentscore --;
     else if(thetype == "word")currentscore -= v[i].wordcount;
+    else if(thetype == "character")currentscore -= v[i].charcount;
   }
   // ------------------------------------------------
 
