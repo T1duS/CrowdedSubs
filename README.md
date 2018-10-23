@@ -8,7 +8,7 @@ Calculates the part of the srt file which is no longer than a particular amount 
 ## Examples
 1: `./a tbbt.srt 120 sub` This will calculate the part of the srt file which is shorter than 2 minutes in length and contains the most amount of subtitles. <br>
 2: `./a rickandmorty.srt 100 word` This will calculate the part of the srt file which is shorter than 100 seconds in length and contains the most amount of words. <br>
-2: `./a sherlock.srt 42 character` This will calculate the part of the srt file which is shorter than 42 seconds in length and contains the most amount of characters. <br>
+3: `./a sherlock.srt 42 character` This will calculate the part of the srt file which is shorter than 42 seconds in length and contains the most amount of characters. <br>
 
 ## Demo
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/UDrKWUs3NHw/0.jpg)](http://www.youtube.com/watch?v=UDrKWUs3NHw "Crowded Subs : Demo")
